@@ -1,0 +1,10 @@
+{
+	"id":"Terraforming & Station Construction",
+	"name":"Terraforming & Station Construction",
+	"version":"8.0.1",
+	"author": "boggled",
+	"description":"Terraform planets and build stations.",
+	"gameVersion":"0.95.1a-RC6",
+	"jars":["jar/BoggledTerraformingAndStationConstruction.jar"],
+	"modPlugin":"data.scripts.BoggledTascPlugin",
+}

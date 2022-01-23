@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <title>TASC Usage Statistics</title>
+  <link rel="stylesheet" href="./usage.css" type="text/css"/> 
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="container">
+      <a class="boggled-starsector-home-nav" href="https://boggled-starsector.com">boggled starsector</a>
+
+      <a class="desktop-nav-hyperlink" href="https://boggled-starsector.com/usage">Usage Statistics</a>
+      <a class="desktop-nav-hyperlink" href="https://fractalsoftworks.com/forum/index.php?topic=17094.0">Forum</a>
+      <a class="desktop-nav-hyperlink" href="https://github.com/boggled-starsector/boggled_modpack">GitHub</a>
+
+      <img id="mobile-hamburger-menu" class="mobile-menu" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/hamburger-icon.png" alt="Navigation Menu Button">
+      
+      <nav id="navbar-mobile" class= "nav-mobile">
+        <img id="mobile-menu-exit-icon" class="mobile-menu-exit" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/x-close.png" alt="Close Navigation Menu">
+
+        <ul class="mobile-menu-list">
+          <a class="mobile-nav-hyperlink" href="https://boggled-starsector.com/usage">Usage Statistics</a>
+          <a class="mobile-nav-hyperlink" href="https://fractalsoftworks.com/forum/index.php?topic=17094.0">Forum</a>
+          <a class="mobile-nav-hyperlink" href="https://github.com/boggled-starsector/boggled_modpack">GitHub</a>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="main">
+      <ul class="active-users-information">
+        <img class="station-image" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/station_interior.png" alt="Station Interior">
+        <div class="active-users-information-text-lines">
+          <p class="bolded-information-line">Daily Active Users:</p>
+          <p id="dau-line" class="active-users-line">Loading...</p>
+          <p class="bolded-information-line">Monthly Active Users:</p>
+          <p id="mau-line" class="active-users-line">Loading...</p>
+          <p class="bolded-information-line">All-Time Active Users:</p>
+          <p id="atau-line" class="active-users-line">Loading...</p>
+        </div>
+        <img class="eventide-image" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/eventide_bg.jpg" alt="Eventide Stars">
+        <div class="active-users-region-text-lines">
+          <p class="bolded-information-line-1">Monthly Active Users by Country/Region:</p>
+          <p id="mau-by-country-line" class="active-users-by-country-line">Loading...</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    const mobileButton = document.getElementById("mobile-hamburger-menu");
+    const mobileNavBar = document.getElementById("navbar-mobile");
+    const mobileButtonExit = document.getElementById("mobile-menu-exit-icon");
+
+    mobileButton.addEventListener('click', () => {
+      mobileNavBar.classList.add('show-mobile-navbar');
+    })
+
+    mobileButtonExit.addEventListener('click', () => {
+      mobileNavBar.classList.remove('show-mobile-navbar');
+    })
+
+    document.addEventListener("DOMContentLoaded", function()
+    {
+      const dauLine = document.getElementById("dau-line");
+      const mauLine = document.getElementById("mau-line");
+      const atauLine = document.getElementById("atau-line");
+      const mauCountryLine = document.getElementById("mau-by-country-line");
+
+      const url1 = 'https://boggled-starsector.com/api/numbers/dau';
+      fetch(url1).then(function(response) 
+      {
+        response.json().then(function(json) 
+        {
+          dauLine.innerHTML = json.dau;
+        });
+      });
+
+      const url2 = 'https://boggled-starsector.com/api/numbers/mau';
+      fetch(url2).then(function(response) 
+      {
+        response.json().then(function(json)
+        {
+          mauLine.innerHTML = json.mau;
+        });
+      });
+
+      const url3 = 'https://boggled-starsector.com/api/numbers/atau';
+      fetch(url3).then(function(response)
+      {
+        response.json().then(function(json) 
+        {
+          atauLine.innerHTML = json.atau;
+        });
+      });
+
+      const url4 = "https://boggled-starsector.com/api/numbers/countrymau"
+      fetch(url4).then(function(response) 
+      {
+        response.json().then(function(json) 
+        {
+          mauCountryLine.innerHTML = json.countrymau;
+        });
+      });
+    });
+    
+  </script>
+
+</body>
+</html>

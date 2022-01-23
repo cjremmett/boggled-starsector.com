@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body
+{
+    background-image: url("https://wallpaper.dog/large/996646.jpg");
+    background-color: #cccccc;
+    margin: 0;
+    font-family: 'Orbitron',d sans-serif;
+} 
+
+.navbar
+{
+    background: #f8f9fa;
+    padding: 1em;
+    margin: 0;
+
+    .boggled-starsector-home-nav
+    {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 1.2em;
+    }
+
+    .container
+    {
+        .mobile-menu
+        {
+            cursor: pointer;
+            max-width: 100%;
+            height: 25px;
+        }
+
+        .nav-mobile
+        {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            width: 400px;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            background: black;
+            padding: 1em;
+
+            .mobile-menu-exit
+            {
+                cursor: pointer;
+                max-width: 100%;
+                height: 25px;
+                margin: 0;
+                padding: 0;
+                margin-top: 0;
+                margin-bottom: 2em;
+                float: right;
+            }
+
+            .mobile-menu-list
+            {
+                margin: 0;
+                padding: 0;
+                margin-top: 3em;
+
+                .mobile-nav-hyperlink
+                {
+                    text-decoration: none;
+                    color: white;
+                    cursor: pointer;
+                    font-size: 1.2em;
+                    margin: 0;
+                    padding: 0;
+                    display: block;
+                    padding: .5em;
+                    text-align: right;
+
+                    &:hover
+                    {
+                        font-weight: bold;
+                    }
+                }    
+            }
+        }
+        
+        .show-mobile-navbar
+        {
+            display: block;
+        }
+    }
+} 
+
+.hero
+{
+    //Mobile viewport max reasonable size: 950px
+    width: 640px;
+
+    background: white;
+    margin: 0;
+    padding: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    .main
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    .features-list
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    .feature-image-1
+    {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 640px;
+    }
+
+    .feature-image-2
+    {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 640px;
+    }
+
+    .feature-image-3
+    {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 640px;
+    }
+
+    .features-list-text-lines
+    {
+        width: 640px;
+        margin: 0;
+        padding: 0;
+
+        .bolded-features
+        {
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .bullets-features
+        {
+            display: list-item;
+            list-style-type: disc;       
+            list-style-position: inside;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 949px)
+{
+    .desktop-nav-hyperlink
+    {
+        display: none;
+    }
+
+    .container
+    {
+        display: flex;
+        place-content: space-between;
+    }
+
+    .features-list
+    {
+        width: 640px;
+    }
+
+    .feature-image-1
+    {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    .feature-image-2
+    {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .feature-image-3
+    {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (min-width: 950px)
+{
+    .mobile-menu
+    {
+        display: none;
+    }
+
+    .desktop-nav-hyperlink
+    {
+        display: inline;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        font-size: 1.1em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1em;
+    
+        &:hover
+        {
+            font-weight: bold;
+        }
+    }
+
+    .container
+    {
+        display: block;
+        width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .features-list
+    {
+        width: 640px;
+    }
+
+    .feature-image-1
+    {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    .feature-image-2
+    {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .feature-image-3
+    {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (min-width: 1380px)
+{
+    .container
+    {
+        display: block;
+        width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // Make the text sit to the right of 
+    // the images instead of below
+
+    .hero
+    {
+        width: 1280px;
+        display: block;
+    }
+
+    .features-list
+    {
+        width: 1280px;
+        display: grid;
+        grid-template-columns: 640px 320px;
+        row-gap: 1em;
+        column-gap: 1em;
+    }
+
+    .feature-image-1
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .feature-image-2
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .feature-image-3
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

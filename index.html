@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <title>Boggled Starsector</title>
+  <link rel="stylesheet" href="./main.css" type="text/css"/> 
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="container">
+      <a class="boggled-starsector-home-nav" href="https://boggled-starsector.com">boggled starsector</a>
+
+      <a class="desktop-nav-hyperlink" href="https://boggled-starsector.com/usage">Usage Statistics</a>
+      <a class="desktop-nav-hyperlink" href="https://fractalsoftworks.com/forum/index.php?topic=17094.0">Forum</a>
+      <a class="desktop-nav-hyperlink" href="https://github.com/boggled-starsector/boggled_modpack">GitHub</a>
+
+      <img id="mobile-hamburger-menu" class="mobile-menu" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/hamburger-icon.png" alt="Navigation Menu Button">
+      
+      <nav id="navbar-mobile" class= "nav-mobile">
+        <img id="mobile-menu-exit-icon" class="mobile-menu-exit" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/x-close.png" alt="Close Navigation Menu">
+
+        <ul class="mobile-menu-list">
+          <a class="mobile-nav-hyperlink" href="https://boggled-starsector.com/usage">Usage Statistics</a>
+          <a class="mobile-nav-hyperlink" href="https://fractalsoftworks.com/forum/index.php?topic=17094.0">Forum</a>
+          <a class="mobile-nav-hyperlink" href="https://github.com/boggled-starsector/boggled_modpack">GitHub</a>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="main">
+      <ul class="features-list">
+        <img class="feature-image-1" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/stellar_mirror.jpg" alt="Terraforming">
+        <div class="features-list-text-lines">
+          <p class="bolded-features">Terraforming Features:</p>
+          <p class="bullets-features">Terraform planets into one of six different types: Terran, water-covered, desert, jungle, tundra and frozen.</p>
+          <p class="bullets-features">Improve farming, organics and volatiles resources.</p>
+          <p class="bullets-features">Modify planetary weather patterns and climate.</p>
+          <p class="bullets-features">Build gigantic domed cities to protect your colonists from harsh surface conditions.</p>
+          <p class="bullets-features">Unleash gene-modded wildlife to attract tourists and generate revenue.</p>
+          <p class="bullets-features">Build a network of mass drivers to transport water-ice for terraforming purposes.</p>  
+        </div>
+        <img class="feature-image-2" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/terraforming_platform.png" alt="Station Construction">
+        <div class="features-list-text-lines">
+          <p class="bolded-features">Station Construction Features:</p>
+          <p class="bullets-features">Construct orbital habitats around your planets, each with their own market and building slots.</p>
+          <p class="bullets-features">Build mining stations to exploit asteroid belts.</p>
+          <p class="bullets-features">Build siphon stations to extract volatiles from the atmosphere of gas giants.</p>
+          <p class="bullets-features">Colonize existing abandoned stations to expand your faction in a resource-efficient manner.</p>  
+        </div>
+        <img class="feature-image-3" src="https://github.com/boggled-starsector/boggled_modpack/raw/master/Website/domain_archaeology.png" alt="Domain Tech">
+        <div class="features-list-text-lines">
+          <p class="bolded-features">Miscellaneous Features:</p>
+          <p class="bullets-features">Discover Domain-era artifacts that can be used to build technologically-advanced marvels.</p>
+          <p class="bullets-features">Utilize AI cores to surveil your colonists and disrupt Pather cells.</p>
+          <p class="bullets-features">Train new AI cores using a Domain-era supercomputer.</p>
+          <p class="bullets-features">Build advanced comm relays, nav buoys and sensor arrays with increased bonuses.</p>
+          <p class="bullets-features">Place an AI core in charge of an automated battlestation to defend your colonies.</p>
+        </div>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    const mobileButton = document.getElementById("mobile-hamburger-menu");
+    const mobileNavBar = document.getElementById("navbar-mobile");
+    const mobileButtonExit = document.getElementById("mobile-menu-exit-icon");
+
+    mobileButton.addEventListener('click', ()=> {
+      mobileNavBar.classList.add('show-mobile-navbar')
+    })
+
+    mobileButtonExit.addEventListener('click', ()=> {
+      mobileNavBar.classList.remove('show-mobile-navbar')
+    })
+
+  </script>
+
+</body>
+</html>

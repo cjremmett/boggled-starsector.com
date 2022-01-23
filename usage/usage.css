@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+body {
+  background-image: url("https://wallpaper.dog/large/996646.jpg");
+  background-color: #cccccc;
+  margin: 0;
+  font-family: "Orbitron", d sans-serif;
+}
+
+.navbar {
+  background: #f8f9fa;
+  padding: 1em;
+  margin: 0;
+}
+.navbar .boggled-starsector-home-nav {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+.navbar .container .mobile-menu {
+  cursor: pointer;
+  max-width: 100%;
+  height: 25px;
+}
+.navbar .container .nav-mobile {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 400px;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: black;
+  padding: 1em;
+}
+.navbar .container .nav-mobile .mobile-menu-exit {
+  cursor: pointer;
+  max-width: 100%;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 2em;
+  float: right;
+}
+.navbar .container .nav-mobile .mobile-menu-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 3em;
+}
+.navbar .container .nav-mobile .mobile-menu-list .mobile-nav-hyperlink {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  display: block;
+  padding: 0.5em;
+  text-align: right;
+}
+.navbar .container .nav-mobile .mobile-menu-list .mobile-nav-hyperlink:hover {
+  font-weight: bold;
+}
+.navbar .container .show-mobile-navbar {
+  display: block;
+}
+
+.hero {
+  width: 640px;
+  background: white;
+  margin: 0;
+  padding: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero .main {
+  margin: 0;
+  padding: 0;
+}
+.hero .active-users-information {
+  margin: 0;
+  padding: 0;
+}
+.hero .station-image {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  width: 640px;
+}
+.hero .active-users-information-text-lines {
+  width: 640px;
+  margin: 0;
+  padding: 0;
+}
+.hero .active-users-information-text-lines .bolded-information-line {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.hero .active-users-information-text-lines .active-users-line {
+  display: list-item;
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0.5em;
+}
+.hero .eventide-image {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  width: 640px;
+}
+.hero .active-users-region-text-lines {
+  width: 640px;
+  margin: 0;
+  padding: 0;
+}
+.hero .active-users-region-text-lines .bolded-information-line-1 {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.hero .active-users-region-text-lines .active-users-by-country-line {
+  display: list-item;
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0.5em;
+}
+
+@media only screen and (max-width: 949px) {
+  .desktop-nav-hyperlink {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    place-content: space-between;
+  }
+
+  .active-users-information {
+    width: 640px;
+  }
+
+  .station-image {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .eventide-image {
+    display: none;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-nav-hyperlink {
+    display: inline;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0;
+    padding-left: 1em;
+  }
+  .desktop-nav-hyperlink:hover {
+    font-weight: bold;
+  }
+
+  .container {
+    display: block;
+    width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .active-users-information {
+    width: 640px;
+  }
+
+  .station-image {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .eventide-image {
+    display: none;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+}
+@media only screen and (min-width: 1380px) {
+  .container {
+    display: block;
+    width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero {
+    width: 1280px;
+    display: block;
+  }
+
+  .active-users-information {
+    width: 1280px;
+    display: grid;
+    grid-template-columns: 640px 320px;
+    row-gap: 1em;
+    column-gap: 1em;
+  }
+
+  .station-image {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .eventide-image {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=usage.css.map */
